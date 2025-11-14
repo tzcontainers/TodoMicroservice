@@ -1,14 +1,18 @@
-# Java
+# === Build output ===
+target/
+build/
+
+# === Java ===
 *.class
+
+# === Packages / Archives ===
 *.jar
 *.war
 *.ear
 
-# Maven / Gradle
-target/
-build/
+# === IDE Files ===
 
-# IntelliJ
+# IntelliJ IDEA
 .idea/
 *.iml
 out/
@@ -16,5 +20,14 @@ out/
 # VS Code
 .vscode/
 
-# MacOS
+# Eclipse (only if you use it)
+.project
+.classpath
+.settings/
+
+# === OS Files ===
 .DS_Store
+Thumbs.db
+
+# === Logs ===
+*.log
