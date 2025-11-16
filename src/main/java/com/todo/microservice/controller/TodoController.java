@@ -63,6 +63,5 @@ public class TodoController {
     public List<Todo> getByPriorityAndStatus(@RequestParam String priority,@RequestParam Status status) {
         return todoService.getByPriorityAndStatus(priority, status);
     }
-
     //Implemented filtering (which could take different types of parameters at the same time - e,g status, date, priority)
 }
