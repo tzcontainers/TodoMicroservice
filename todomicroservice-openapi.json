@@ -1,0 +1,57 @@
+{
+  "openapi": "3.0.0",
+  "info": { "title": "TodoMicroservice", "version": "1.0.0" },
+  "servers": [ { "url": "http://localhost:8080" } ],
+  "paths": {
+    "/todo": {
+      "get": {
+        "summary": "TodoController.getAll",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/todo/add": {
+      "post": {
+        "summary": "TodoController.addTodo",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/todo/filter": {
+      "get": {
+        "summary": "TodoController.getByPriorityAndStatus",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/todo/priority/{priority}": {
+      "get": {
+        "summary": "TodoController.getByPriority",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/todo/status/{status}": {
+      "get": {
+        "summary": "TodoController.getByStatus",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/todo/{id}": {
+      "delete": {
+        "summary": "TodoController.delete",
+        "responses": { "200": { "description": "OK" } }
+      },
+      "get": {
+        "summary": "TodoController.getTodoById",
+        "responses": { "200": { "description": "OK" } }
+      },
+      "put": {
+        "summary": "TodoController.update",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/user/signUp": {
+      "post": {
+        "summary": "UserController.signUp",
+        "responses": { "200": { "description": "OK" } }
+      }
+    }
+  }
+}
