@@ -1,0 +1,37 @@
+### ADD
+POST http://localhost:8080/todo/add
+Content-Type: application/json
+
+{
+  "userId": "33399393",
+  "title": "Ghost project report",
+  "description": "Faster",
+  "status": "COMPLETED",
+  "priority": "MEDIUM",
+  "dueDate": "2025-11-15"
+}
+
+### GET ALL
+GET http://localhost:8080/todo
+
+### GET BY ID
+GET http://localhost:8080/todo/ed494898-1128-46a7-824d-b7a1230cd7e3
+
+### UPDATE
+PUT http://localhost:8080/todo/ed494898-1128-46a7-824d-b7a1230cd7e3
+Content-Type: application/json
+
+{
+  "userId": "93843993",
+  "title": "GREATER",
+  "description": "UPDATED TEXT",
+  "status": "PENDING",
+  "priority": "URGENT",
+  "dueDate": "2025-11-15"
+}
+
+### DELETE BY ID
+DELETE http://localhost:8080/todo/12bfb0db-1222-4bf0-ba0d-6d4b30331844
+
+### GET BY PRIORITY
+GET http://localhost:8080/todo/priority/MEDIUM
