@@ -6,8 +6,17 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = "com.todo.microservice.repository")
-@EntityScan(basePackages = "com.todo.microservice.models")
+//@EnableJpaRepositories(basePackages = "com.todo.microservice.repository")
+@EnableJpaRepositories(basePackages = {
+        "com.todo.microservice.todo.repository",
+        "com.todo.microservice.user.repository",
+        "com.todo.microservice.address.repository"
+})
+@EntityScan(basePackages = {
+        "com.todo.microservice.todo.model",
+        "com.todo.microservice.user.model",
+        "com.todo.microservice.address.model"
+})
 public class TodoApp {
 
     public static void main(String[] args) {

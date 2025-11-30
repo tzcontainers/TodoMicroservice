@@ -1,0 +1,61 @@
+
+### GET BY PRIORITY
+GET http://localhost:8080/api/todo/priority/MEDIUM
+
+###
+###
+### Create Todo
+POST http://localhost:8080/api/todo/add
+Content-Type: application/json
+
+{
+  "userId": "33399377",
+  "title": "Amazing spiderman",
+  "description": "many things are happening now",
+  "status": "PENDING",
+  "priority": "MEDIUM",
+  "dueDate": "2025-11-15"
+}
+
+### Get All Todos
+GET http://localhost:8080/api/todo
+
+### Get Todo by ID
+GET http://localhost:8080/api/todo/0694479d-465c-4f52-9f7b-90c519bd8a85
+
+### Update Todo
+PUT http://localhost:8080/api/todo/0694479d-465c-4f52-9f7b-90c519bd8a85
+Content-Type: application/json
+
+{
+  "userId": "33399393",
+  "title": "Updated Title",
+  "description": "Updated description",
+  "priority": "HIGH",
+  "status": "PENDING",
+  "dueDate": "2025-12-01"
+}
+
+### Delete Todo
+DELETE http://localhost:8080/api/todo/cd78feaf-9ef0-4d17-b16d-a743c6072639
+
+### Get by Priority
+GET http://localhost:8080/api/todo/priority/MEDIUM
+
+### Get by Status
+GET http://localhost:8080/api/todo/status/PENDING
+
+### Get by Priority and Status
+GET http://localhost:8080/api/todo/filter?priority=MEDIUM&status=COMPLETED
+
+### Missing input
+POST http://localhost:8080/api/todo/add
+Content-Type: application/json
+
+{
+  "description": "No title provided",
+  "status": "PENDING"
+}
+
+### Not found
+GET http://localhost:8080/api/todo/cd78feaf-9ef0-4d17-b16d-a743c6072612

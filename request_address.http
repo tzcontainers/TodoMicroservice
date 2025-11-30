@@ -1,0 +1,27 @@
+
+### Create a new address
+POST http://localhost:8080/api/addresses
+Content-Type: application/json
+X-User-Id: generation.uuid
+
+{
+  "id": "genaration.UUID",
+  "street": "123 Main Street",
+  "city": "New York",
+  "stateOrProvince": "NY",
+  "zipCode": "10001",
+  "country": "USA",
+  "current": true
+}
+
+### Get all addresses for a user
+GET http://localhost:8080/api/addresses/user
+X-User-Id: user123
+
+### Get current address
+GET http://localhost:8080/api/addresses/current
+X-User-Id: user123
+
+### Get address by ID
+GET http://localhost:8080/api/addresses/address-id-here
+X-

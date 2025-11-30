@@ -33,4 +33,17 @@ public class GlobalExceptionHandler {
         );
         return new ResponseEntity<>(body, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+//    @ExceptionHandler(AddressNotFoundException.class)
+//    public ResponseEntity<ErrorResponse> handleAddressNotFoundException(
+//            AddressNotFoundException ex, WebRequest request) {
+//        ErrorResponse errorResponse = new ErrorResponse(
+//                HttpStatus.NOT_FOUND.value(),
+//                "Not Found",
+//                ex.getMessage(),
+//                request.getDescription(false).replace("uri=", "")
+//        );
+//        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+//    }
+
 }
