@@ -1,0 +1,47 @@
+###
+POST http://localhost:8080/api/user/signUp
+Content-Type: application/json
+
+{
+  "username": "nanatazoh123",
+  "firstname": "Tazoh",
+  "lastname": "Freerick",
+  "gender": "Male",
+  "dateOfBirth": "20/34/1970",
+  "email": "nana@example.com",
+  "phoneNumber": "07098730000",
+  "password": "nana123!"
+}
+
+###
+POST http://localhost:8080/api/user/signUp
+Content-Type: application/json
+
+{
+  "username": "Johnn123hhg",
+  "firstname": "Jones",
+  "lastname": "Doe",
+  "gender": "Male",
+  "dateOfBirth": "20/34/1980",
+  "email": "johns@example.com",
+  "phoneNumber": "07933730033",
+  "password": "JohnSecret123!",
+  "address": {
+    "street": "9 Main St",
+    "city": "Los Angeles",
+    "state": "LA",
+    "zipCode": "62703",
+    "country": "USA"
+  },
+  "todos": [
+    {
+      "userId": "00399377",
+      "title": "No mans land",
+      "description": "We have to buy them for greater review and to receive a discount at the end of this year",
+      "status": "PENDING",
+      "priority": "MEDIUM",
+      "dueDate": "2025-11-15"
+    }
+  ]
+}
+

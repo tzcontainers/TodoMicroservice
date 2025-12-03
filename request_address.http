@@ -2,10 +2,9 @@
 ### Create a new address
 POST http://localhost:8080/api/addresses
 Content-Type: application/json
-X-User-Id: generation.uuid
+X-User-Id: cdd59e72-470e-46e0-9de2-0e99e7b4e847
 
 {
-  "id": "genaration.UUID",
   "street": "123 Main Street",
   "city": "New York",
   "stateOrProvince": "NY",
@@ -16,12 +15,11 @@ X-User-Id: generation.uuid
 
 ### Get all addresses for a user
 GET http://localhost:8080/api/addresses/user
-X-User-Id: user123
+X-User-Id: cdd59e72-470e-46e0-9de2-0e99e7b4e847
 
 ### Get current address
 GET http://localhost:8080/api/addresses/current
 X-User-Id: user123
 
 ### Get address by ID
-GET http://localhost:8080/api/addresses/address-id-here
-X-
+GET http://localhost:8080/api/addresses/cdd59e72-470e-46e0-9de2-0e99e7b4e847
